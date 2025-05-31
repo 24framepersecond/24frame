@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Placeholder, choose a modern sans-serif */
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 16px; /* 8px * 2 */
+}
+
+h1, h2, h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Placeholder for modern, impactful font */
+    color: #FFFFFF;
+}
+
+h1 { font-size: 48px; } /* 32-64px range */
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+p {
+    font-size: 18px; /* 18-24px range */
+    color: #F5F5F5;
+}
+
+a {
+    color: #800020; /* Changed to Burgundy for links/accents */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #000000; /* Dark Black */
+    padding: 16px 0; /* 8px * 2 top/bottom */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 50px; /* Adjust as needed */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 24px; /* 8px * 3 */
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    font-size: 18px; /* 16-20px range */
+    font-weight: 500; /* Medium weight */
+    text-transform: uppercase;
+}
+header nav ul li a:hover, header nav ul li a.active {
+    color: #800020; /* Changed to Burgundy for hover/active */
+}
+
+/* Main Content Sections */
+main {
+    padding-top: 80px; /* Adjust based on actual header height */
+}
+
+section {
+    padding: 48px 0; /* 8px * 6 */
+}
+
+/* Hero Section (Main Page) */
+#hero {
+    height: calc(100vh - 80px); /* Full viewport height minus header */
+    background-image: url('images/banner.jpg'); /* Changed from hero_background.jpg */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0; /* Remove section padding for full bleed */
+}
+
+#hero h1 {
+    font-size: 64px;
+    color: #FFFFFF;
+    font-family: 'Lora', serif; /* Changed to Lora font */
+    font-weight: 700; /* Set to bold weight */
+    margin-bottom: 0; /* Remove bottom margin from h1 */
+}
+
+.sub-headline {
+    font-family: 'Lora', serif; /* Same font as h1 */
+    font-size: 21px; /* Approximately 1/3 of h1 (64px / 3) */
+    color: #FFFFFF;
+    font-weight: 400; /* Reverted to Normal weight for sub-headline */
+    margin-top: 0; /* Remove top margin from sub-headline */
+}
+
+/* Scroll Gallery (Main Page) */
+#scroll-gallery .gallery-image {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* For any text overlay if needed */
+}
+
+/* Full Screen Image (Used on ROOM and ABOUT US pages) */
+.full-screen-image {
+    height: calc(70vh - 80px); /* Adjust as needed, less than main hero */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific override for about-hero to directly contain an image */
+#about-hero {
+    padding: 0; /* Remove all padding */
+    height: auto; /* Adjust height to content */
+    display: block; /* Remove flex properties */
+}
+
+#about-main-image {
+    width: 50%; /* Reduced width to half */
+    display: block;
+    border: none; /* Remove any border */
+    margin-top: 0; /* Ensure no top margin */
+    margin-left: auto; /* For centering */
+    margin-right: auto; /* For centering */
+}
+
+/* Room Page Specifics */
+/* #room-details h2, #room-details h3 { */
+/* color: #800020; */ /* Changed to Burgundy for headings */
+/* } */
+
+/* #room-gallery .gallery-grid { */
+/* display: grid; */
+/* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+/* gap: 16px; */ /* 8px * 2 */
+/* } */
+
+/* #room-gallery .gallery-grid img { */
+/* width: 100%; */
+/* height: 200px; */ /* Or use aspect ratio */
+/* object-fit: cover; */
+/* border: 2px solid #800020; */ /* Changed to Burgundy border */
+/* } */
+
+/* About Us Page Specifics */
+#service-overview {
+    padding-top: 24px; /* Add some padding to the next section if needed */
+}
+
+#service-overview h2, #facility-info h2 {
+    color: #800020; /* Changed to Burgundy for headings */
+}
+
+#contact-info h2 {
+    font-size: 18px; /* Same as p for less emphasis */
+    color: #F5F5F5;   /* Light Gray, same as p */
+    font-family: 'Arial', sans-serif; /* Match p font, or keep Lora if preferred but normal weight */
+    font-weight: normal; /* Normal weight */
+    margin-bottom: 8px; /* Add some space below it, similar to a paragraph a normal heading would have */
+}
+
+#facility-info .facility-images {
+    display: flex;
+    gap: 16px; /* 8px * 2 */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 16px;
+}
+
+#facility-info .facility-images img {
+    flex: 1 1 300px; /* Flex grow, shrink, basis */
+    /* max-width: calc(50% - 8px); */ /* Commented out as it might conflict with 100% width images */
+    max-width: 100%; /* Ensure images in this gallery can also be full width if single */
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #1a1a1a; /* This is for gallery images, not the main image */
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a; /* Darker background for footer */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 24px 0; /* 8px * 3 */
+    margin-top: 48px; /* 8px * 6 */
+}
+
+/* Responsive Design */
+/* Breakpoint: 1200px (Large Desktops) - Already covered by max-width on container */
+
+/* Breakpoint: 768px (Tablets) */
+@media (max-width: 768px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 30px; }
+    p { font-size: 16px; }
+    header nav ul li a { font-size: 16px; }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav {
+        margin-top: 16px; /* 8px * 2 */
+    }
+    header nav ul li {
+        margin-left: 16px; /* 8px * 2 */
+        margin-right: 16px;
+    }
+    main {
+        padding-top: 120px; /* Increased due to taller header on mobile */
+    }
+    #hero {
+        height: calc(100vh - 120px);
+    }
+    #hero h1 {
+        font-size: 48px;
+    }
+    .full-screen-image {
+        /* height: calc(50vh - 120px); */ /* Keep this for other full-screen images if any */
+    }
+    #about-hero {
+        margin-top: 0; /* Ensure hero starts right after header on mobile */
+    }
+    #facility-info .facility-images img {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Breakpoint: 480px (Mobile) */
+@media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 8px 0; /* 8px top/bottom */
+    }
+    main {
+        padding-top: 180px; /* Further adjust if header becomes very tall */
+    }
+    #hero {
+        height: calc(100vh - 180px);
+    }
+     #hero h1 {
+        font-size: 36px;
+    }
+    .full-screen-image {
+        /* height: calc(40vh - 180px); */ /* Keep this for other full-screen images if any */
+    }
+    #about-hero {
+        margin-top: 0; /* Ensure hero starts right after header on mobile */
+    }
+    #scroll-gallery .gallery-image {
+        height: 60vh; /* Reduce height for better mobile scrolling */
+    }
+}
+
+/* Utility class for active navigation link - to be handled by JS */
+/* nav ul li a.active { */
+/* color: #FF0000; */
+/* font-weight: bold; */
+/* } */ 
