@@ -283,14 +283,27 @@ footer {
      #hero h1 {
         font-size: 36px;
     }
-    .full-screen-image {
-        /* height: calc(40vh - 180px); */ /* Keep this for other full-screen images if any */
+    .sub-headline {
+        font-size: 18px; /* Adjust sub-headline font size for mobile */
     }
+    /* .full-screen-image { */
+        /* height: calc(40vh - 180px); */ /* Keep this for other full-screen images if any */
+    /* } */
     #about-hero {
         margin-top: 0; /* Ensure hero starts right after header on mobile */
     }
+    /* #about-main-image { */
+        /* width: 100%; */ /* This rule is now handled by orientation query */
+    /* } */
     #scroll-gallery .gallery-image {
         height: 60vh; /* Reduce height for better mobile scrolling */
+    }
+}
+
+/* Change image size based on aspect ratio */
+@media (orientation: portrait) {
+    #about-main-image {
+        width: 100%; /* Make image full width when viewport is taller */
     }
 }
 
